@@ -1,3 +1,6 @@
+
+import NotFound from "./not-found";
+
 export default async function ReviewPage({
     params,
 }: {
@@ -5,6 +8,9 @@ export default async function ReviewPage({
 }) {
     const { productId } = await params;
     const { reviewId } = await params;
+    if(parseInt(reviewId)>100){
+        return <NotFound />;
+    }
     return (
         <main>
             <h1>Welcome to the Review page of {reviewId} of product {productId}</h1>
