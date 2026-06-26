@@ -21,11 +21,7 @@ export default function RootLayout({
           <h1>Header</h1>
           </div></header>
       <body className="min-h-full flex flex-col">{children}</body>
-      <footer>
-        <div style={{backgroundColor:"black", color:"white"}}>
-          <h1>Footer</h1>
-        </div>
-      </footer>
+     
     </html>
   );
 }
